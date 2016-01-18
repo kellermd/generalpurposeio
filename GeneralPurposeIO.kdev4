@@ -1,0 +1,4 @@
+[Project]
+Name=GeneralPurposeIO
+Manager=KDevCMakeManager
+VersionControl=kdevgit
