@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/david/projects/GeneralPurposeIO/Common/GPIO.cpp
+GPIO.h
+/home/david/projects/GeneralPurposeIO/Common/GPIO.h
+
+/home/david/projects/GeneralPurposeIO/Common/GPIO.h
+string
+-
+

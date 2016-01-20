@@ -1,0 +1,1 @@
+/usr/bin/c++   -g   CMakeFiles/generalpurposeio.dir/Program/main.cpp.o  -o generalpurposeio -rdynamic Common/libCommon.a RaspberryPi2/libRaspberryPi2.a Common/libCommon.a 
