@@ -1,8 +1,14 @@
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
+  "C"
   "CXX"
   )
 # The set of files for implicit dependencies of each language:
+set(CMAKE_DEPENDS_CHECK_C
+  "/home/david/projects/GeneralPurposeIO/RaspberryPi2/pi_2_dht_read.c" "/home/david/projects/GeneralPurposeIO/build/RaspberryPi2/CMakeFiles/RaspberryPi2.dir/pi_2_dht_read.c.o"
+  "/home/david/projects/GeneralPurposeIO/RaspberryPi2/pi_2_mmio.c" "/home/david/projects/GeneralPurposeIO/build/RaspberryPi2/CMakeFiles/RaspberryPi2.dir/pi_2_mmio.c.o"
+  )
+set(CMAKE_C_COMPILER_ID "GNU")
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/david/projects/GeneralPurposeIO/RaspberryPi2/GPIO.cpp" "/home/david/projects/GeneralPurposeIO/build/RaspberryPi2/CMakeFiles/RaspberryPi2.dir/GPIO.cpp.o"
   )

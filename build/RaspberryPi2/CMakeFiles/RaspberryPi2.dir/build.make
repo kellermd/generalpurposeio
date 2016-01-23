@@ -72,14 +72,64 @@ RaspberryPi2/CMakeFiles/RaspberryPi2.dir/GPIO.cpp.o.provides: RaspberryPi2/CMake
 
 RaspberryPi2/CMakeFiles/RaspberryPi2.dir/GPIO.cpp.o.provides.build: RaspberryPi2/CMakeFiles/RaspberryPi2.dir/GPIO.cpp.o
 
+RaspberryPi2/CMakeFiles/RaspberryPi2.dir/pi_2_mmio.c.o: RaspberryPi2/CMakeFiles/RaspberryPi2.dir/flags.make
+RaspberryPi2/CMakeFiles/RaspberryPi2.dir/pi_2_mmio.c.o: ../RaspberryPi2/pi_2_mmio.c
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/projects/GeneralPurposeIO/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object RaspberryPi2/CMakeFiles/RaspberryPi2.dir/pi_2_mmio.c.o"
+	cd /home/david/projects/GeneralPurposeIO/build/RaspberryPi2 && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/RaspberryPi2.dir/pi_2_mmio.c.o   -c /home/david/projects/GeneralPurposeIO/RaspberryPi2/pi_2_mmio.c
+
+RaspberryPi2/CMakeFiles/RaspberryPi2.dir/pi_2_mmio.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/RaspberryPi2.dir/pi_2_mmio.c.i"
+	cd /home/david/projects/GeneralPurposeIO/build/RaspberryPi2 && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/david/projects/GeneralPurposeIO/RaspberryPi2/pi_2_mmio.c > CMakeFiles/RaspberryPi2.dir/pi_2_mmio.c.i
+
+RaspberryPi2/CMakeFiles/RaspberryPi2.dir/pi_2_mmio.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/RaspberryPi2.dir/pi_2_mmio.c.s"
+	cd /home/david/projects/GeneralPurposeIO/build/RaspberryPi2 && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/david/projects/GeneralPurposeIO/RaspberryPi2/pi_2_mmio.c -o CMakeFiles/RaspberryPi2.dir/pi_2_mmio.c.s
+
+RaspberryPi2/CMakeFiles/RaspberryPi2.dir/pi_2_mmio.c.o.requires:
+.PHONY : RaspberryPi2/CMakeFiles/RaspberryPi2.dir/pi_2_mmio.c.o.requires
+
+RaspberryPi2/CMakeFiles/RaspberryPi2.dir/pi_2_mmio.c.o.provides: RaspberryPi2/CMakeFiles/RaspberryPi2.dir/pi_2_mmio.c.o.requires
+	$(MAKE) -f RaspberryPi2/CMakeFiles/RaspberryPi2.dir/build.make RaspberryPi2/CMakeFiles/RaspberryPi2.dir/pi_2_mmio.c.o.provides.build
+.PHONY : RaspberryPi2/CMakeFiles/RaspberryPi2.dir/pi_2_mmio.c.o.provides
+
+RaspberryPi2/CMakeFiles/RaspberryPi2.dir/pi_2_mmio.c.o.provides.build: RaspberryPi2/CMakeFiles/RaspberryPi2.dir/pi_2_mmio.c.o
+
+RaspberryPi2/CMakeFiles/RaspberryPi2.dir/pi_2_dht_read.c.o: RaspberryPi2/CMakeFiles/RaspberryPi2.dir/flags.make
+RaspberryPi2/CMakeFiles/RaspberryPi2.dir/pi_2_dht_read.c.o: ../RaspberryPi2/pi_2_dht_read.c
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/projects/GeneralPurposeIO/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object RaspberryPi2/CMakeFiles/RaspberryPi2.dir/pi_2_dht_read.c.o"
+	cd /home/david/projects/GeneralPurposeIO/build/RaspberryPi2 && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/RaspberryPi2.dir/pi_2_dht_read.c.o   -c /home/david/projects/GeneralPurposeIO/RaspberryPi2/pi_2_dht_read.c
+
+RaspberryPi2/CMakeFiles/RaspberryPi2.dir/pi_2_dht_read.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/RaspberryPi2.dir/pi_2_dht_read.c.i"
+	cd /home/david/projects/GeneralPurposeIO/build/RaspberryPi2 && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/david/projects/GeneralPurposeIO/RaspberryPi2/pi_2_dht_read.c > CMakeFiles/RaspberryPi2.dir/pi_2_dht_read.c.i
+
+RaspberryPi2/CMakeFiles/RaspberryPi2.dir/pi_2_dht_read.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/RaspberryPi2.dir/pi_2_dht_read.c.s"
+	cd /home/david/projects/GeneralPurposeIO/build/RaspberryPi2 && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/david/projects/GeneralPurposeIO/RaspberryPi2/pi_2_dht_read.c -o CMakeFiles/RaspberryPi2.dir/pi_2_dht_read.c.s
+
+RaspberryPi2/CMakeFiles/RaspberryPi2.dir/pi_2_dht_read.c.o.requires:
+.PHONY : RaspberryPi2/CMakeFiles/RaspberryPi2.dir/pi_2_dht_read.c.o.requires
+
+RaspberryPi2/CMakeFiles/RaspberryPi2.dir/pi_2_dht_read.c.o.provides: RaspberryPi2/CMakeFiles/RaspberryPi2.dir/pi_2_dht_read.c.o.requires
+	$(MAKE) -f RaspberryPi2/CMakeFiles/RaspberryPi2.dir/build.make RaspberryPi2/CMakeFiles/RaspberryPi2.dir/pi_2_dht_read.c.o.provides.build
+.PHONY : RaspberryPi2/CMakeFiles/RaspberryPi2.dir/pi_2_dht_read.c.o.provides
+
+RaspberryPi2/CMakeFiles/RaspberryPi2.dir/pi_2_dht_read.c.o.provides.build: RaspberryPi2/CMakeFiles/RaspberryPi2.dir/pi_2_dht_read.c.o
+
 # Object files for target RaspberryPi2
 RaspberryPi2_OBJECTS = \
-"CMakeFiles/RaspberryPi2.dir/GPIO.cpp.o"
+"CMakeFiles/RaspberryPi2.dir/GPIO.cpp.o" \
+"CMakeFiles/RaspberryPi2.dir/pi_2_mmio.c.o" \
+"CMakeFiles/RaspberryPi2.dir/pi_2_dht_read.c.o"
 
 # External object files for target RaspberryPi2
 RaspberryPi2_EXTERNAL_OBJECTS =
 
 RaspberryPi2/libRaspberryPi2.a: RaspberryPi2/CMakeFiles/RaspberryPi2.dir/GPIO.cpp.o
+RaspberryPi2/libRaspberryPi2.a: RaspberryPi2/CMakeFiles/RaspberryPi2.dir/pi_2_mmio.c.o
+RaspberryPi2/libRaspberryPi2.a: RaspberryPi2/CMakeFiles/RaspberryPi2.dir/pi_2_dht_read.c.o
 RaspberryPi2/libRaspberryPi2.a: RaspberryPi2/CMakeFiles/RaspberryPi2.dir/build.make
 RaspberryPi2/libRaspberryPi2.a: RaspberryPi2/CMakeFiles/RaspberryPi2.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX static library libRaspberryPi2.a"
@@ -91,6 +141,8 @@ RaspberryPi2/CMakeFiles/RaspberryPi2.dir/build: RaspberryPi2/libRaspberryPi2.a
 .PHONY : RaspberryPi2/CMakeFiles/RaspberryPi2.dir/build
 
 RaspberryPi2/CMakeFiles/RaspberryPi2.dir/requires: RaspberryPi2/CMakeFiles/RaspberryPi2.dir/GPIO.cpp.o.requires
+RaspberryPi2/CMakeFiles/RaspberryPi2.dir/requires: RaspberryPi2/CMakeFiles/RaspberryPi2.dir/pi_2_mmio.c.o.requires
+RaspberryPi2/CMakeFiles/RaspberryPi2.dir/requires: RaspberryPi2/CMakeFiles/RaspberryPi2.dir/pi_2_dht_read.c.o.requires
 .PHONY : RaspberryPi2/CMakeFiles/RaspberryPi2.dir/requires
 
 RaspberryPi2/CMakeFiles/RaspberryPi2.dir/clean:

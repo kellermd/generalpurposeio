@@ -156,6 +156,30 @@ Common/fast:
 	cd /home/david/projects/GeneralPurposeIO/build && $(MAKE) -f Common/CMakeFiles/Common.dir/build.make Common/CMakeFiles/Common.dir/build
 .PHONY : Common/fast
 
+DHT.o: DHT.cpp.o
+.PHONY : DHT.o
+
+# target to build an object file
+DHT.cpp.o:
+	cd /home/david/projects/GeneralPurposeIO/build && $(MAKE) -f Common/CMakeFiles/Common.dir/build.make Common/CMakeFiles/Common.dir/DHT.cpp.o
+.PHONY : DHT.cpp.o
+
+DHT.i: DHT.cpp.i
+.PHONY : DHT.i
+
+# target to preprocess a source file
+DHT.cpp.i:
+	cd /home/david/projects/GeneralPurposeIO/build && $(MAKE) -f Common/CMakeFiles/Common.dir/build.make Common/CMakeFiles/Common.dir/DHT.cpp.i
+.PHONY : DHT.cpp.i
+
+DHT.s: DHT.cpp.s
+.PHONY : DHT.s
+
+# target to generate assembly for a file
+DHT.cpp.s:
+	cd /home/david/projects/GeneralPurposeIO/build && $(MAKE) -f Common/CMakeFiles/Common.dir/build.make Common/CMakeFiles/Common.dir/DHT.cpp.s
+.PHONY : DHT.cpp.s
+
 GPIO.o: GPIO.cpp.o
 .PHONY : GPIO.o
 
@@ -180,6 +204,54 @@ GPIO.cpp.s:
 	cd /home/david/projects/GeneralPurposeIO/build && $(MAKE) -f Common/CMakeFiles/Common.dir/build.make Common/CMakeFiles/Common.dir/GPIO.cpp.s
 .PHONY : GPIO.cpp.s
 
+Scheduler.o: Scheduler.cpp.o
+.PHONY : Scheduler.o
+
+# target to build an object file
+Scheduler.cpp.o:
+	cd /home/david/projects/GeneralPurposeIO/build && $(MAKE) -f Common/CMakeFiles/Common.dir/build.make Common/CMakeFiles/Common.dir/Scheduler.cpp.o
+.PHONY : Scheduler.cpp.o
+
+Scheduler.i: Scheduler.cpp.i
+.PHONY : Scheduler.i
+
+# target to preprocess a source file
+Scheduler.cpp.i:
+	cd /home/david/projects/GeneralPurposeIO/build && $(MAKE) -f Common/CMakeFiles/Common.dir/build.make Common/CMakeFiles/Common.dir/Scheduler.cpp.i
+.PHONY : Scheduler.cpp.i
+
+Scheduler.s: Scheduler.cpp.s
+.PHONY : Scheduler.s
+
+# target to generate assembly for a file
+Scheduler.cpp.s:
+	cd /home/david/projects/GeneralPurposeIO/build && $(MAKE) -f Common/CMakeFiles/Common.dir/build.make Common/CMakeFiles/Common.dir/Scheduler.cpp.s
+.PHONY : Scheduler.cpp.s
+
+common_dht_read.o: common_dht_read.c.o
+.PHONY : common_dht_read.o
+
+# target to build an object file
+common_dht_read.c.o:
+	cd /home/david/projects/GeneralPurposeIO/build && $(MAKE) -f Common/CMakeFiles/Common.dir/build.make Common/CMakeFiles/Common.dir/common_dht_read.c.o
+.PHONY : common_dht_read.c.o
+
+common_dht_read.i: common_dht_read.c.i
+.PHONY : common_dht_read.i
+
+# target to preprocess a source file
+common_dht_read.c.i:
+	cd /home/david/projects/GeneralPurposeIO/build && $(MAKE) -f Common/CMakeFiles/Common.dir/build.make Common/CMakeFiles/Common.dir/common_dht_read.c.i
+.PHONY : common_dht_read.c.i
+
+common_dht_read.s: common_dht_read.c.s
+.PHONY : common_dht_read.s
+
+# target to generate assembly for a file
+common_dht_read.c.s:
+	cd /home/david/projects/GeneralPurposeIO/build && $(MAKE) -f Common/CMakeFiles/Common.dir/build.make Common/CMakeFiles/Common.dir/common_dht_read.c.s
+.PHONY : common_dht_read.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -193,9 +265,18 @@ help:
 	@echo "... Common"
 	@echo "... list_install_components"
 	@echo "... install/local"
+	@echo "... DHT.o"
+	@echo "... DHT.i"
+	@echo "... DHT.s"
 	@echo "... GPIO.o"
 	@echo "... GPIO.i"
 	@echo "... GPIO.s"
+	@echo "... Scheduler.o"
+	@echo "... Scheduler.i"
+	@echo "... Scheduler.s"
+	@echo "... common_dht_read.o"
+	@echo "... common_dht_read.i"
+	@echo "... common_dht_read.s"
 .PHONY : help
 
 

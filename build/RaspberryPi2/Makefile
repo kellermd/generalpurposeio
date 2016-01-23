@@ -180,6 +180,54 @@ GPIO.cpp.s:
 	cd /home/david/projects/GeneralPurposeIO/build && $(MAKE) -f RaspberryPi2/CMakeFiles/RaspberryPi2.dir/build.make RaspberryPi2/CMakeFiles/RaspberryPi2.dir/GPIO.cpp.s
 .PHONY : GPIO.cpp.s
 
+pi_2_dht_read.o: pi_2_dht_read.c.o
+.PHONY : pi_2_dht_read.o
+
+# target to build an object file
+pi_2_dht_read.c.o:
+	cd /home/david/projects/GeneralPurposeIO/build && $(MAKE) -f RaspberryPi2/CMakeFiles/RaspberryPi2.dir/build.make RaspberryPi2/CMakeFiles/RaspberryPi2.dir/pi_2_dht_read.c.o
+.PHONY : pi_2_dht_read.c.o
+
+pi_2_dht_read.i: pi_2_dht_read.c.i
+.PHONY : pi_2_dht_read.i
+
+# target to preprocess a source file
+pi_2_dht_read.c.i:
+	cd /home/david/projects/GeneralPurposeIO/build && $(MAKE) -f RaspberryPi2/CMakeFiles/RaspberryPi2.dir/build.make RaspberryPi2/CMakeFiles/RaspberryPi2.dir/pi_2_dht_read.c.i
+.PHONY : pi_2_dht_read.c.i
+
+pi_2_dht_read.s: pi_2_dht_read.c.s
+.PHONY : pi_2_dht_read.s
+
+# target to generate assembly for a file
+pi_2_dht_read.c.s:
+	cd /home/david/projects/GeneralPurposeIO/build && $(MAKE) -f RaspberryPi2/CMakeFiles/RaspberryPi2.dir/build.make RaspberryPi2/CMakeFiles/RaspberryPi2.dir/pi_2_dht_read.c.s
+.PHONY : pi_2_dht_read.c.s
+
+pi_2_mmio.o: pi_2_mmio.c.o
+.PHONY : pi_2_mmio.o
+
+# target to build an object file
+pi_2_mmio.c.o:
+	cd /home/david/projects/GeneralPurposeIO/build && $(MAKE) -f RaspberryPi2/CMakeFiles/RaspberryPi2.dir/build.make RaspberryPi2/CMakeFiles/RaspberryPi2.dir/pi_2_mmio.c.o
+.PHONY : pi_2_mmio.c.o
+
+pi_2_mmio.i: pi_2_mmio.c.i
+.PHONY : pi_2_mmio.i
+
+# target to preprocess a source file
+pi_2_mmio.c.i:
+	cd /home/david/projects/GeneralPurposeIO/build && $(MAKE) -f RaspberryPi2/CMakeFiles/RaspberryPi2.dir/build.make RaspberryPi2/CMakeFiles/RaspberryPi2.dir/pi_2_mmio.c.i
+.PHONY : pi_2_mmio.c.i
+
+pi_2_mmio.s: pi_2_mmio.c.s
+.PHONY : pi_2_mmio.s
+
+# target to generate assembly for a file
+pi_2_mmio.c.s:
+	cd /home/david/projects/GeneralPurposeIO/build && $(MAKE) -f RaspberryPi2/CMakeFiles/RaspberryPi2.dir/build.make RaspberryPi2/CMakeFiles/RaspberryPi2.dir/pi_2_mmio.c.s
+.PHONY : pi_2_mmio.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -196,6 +244,12 @@ help:
 	@echo "... GPIO.o"
 	@echo "... GPIO.i"
 	@echo "... GPIO.s"
+	@echo "... pi_2_dht_read.o"
+	@echo "... pi_2_dht_read.i"
+	@echo "... pi_2_dht_read.s"
+	@echo "... pi_2_mmio.o"
+	@echo "... pi_2_mmio.i"
+	@echo "... pi_2_mmio.s"
 .PHONY : help
 
 

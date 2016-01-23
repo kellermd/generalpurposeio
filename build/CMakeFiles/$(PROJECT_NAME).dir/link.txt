@@ -1,1 +1,0 @@
-/usr/bin/c++   -g   "CMakeFiles/\$(PROJECT_NAME).dir/Program/main.cpp.o"  -o $(PROJECT_NAME) -rdynamic Common/libCommon.a RaspberryPi2/libRaspberryPi2.a 

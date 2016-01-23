@@ -72,14 +72,89 @@ Common/CMakeFiles/Common.dir/GPIO.cpp.o.provides: Common/CMakeFiles/Common.dir/G
 
 Common/CMakeFiles/Common.dir/GPIO.cpp.o.provides.build: Common/CMakeFiles/Common.dir/GPIO.cpp.o
 
+Common/CMakeFiles/Common.dir/DHT.cpp.o: Common/CMakeFiles/Common.dir/flags.make
+Common/CMakeFiles/Common.dir/DHT.cpp.o: ../Common/DHT.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/projects/GeneralPurposeIO/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object Common/CMakeFiles/Common.dir/DHT.cpp.o"
+	cd /home/david/projects/GeneralPurposeIO/build/Common && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Common.dir/DHT.cpp.o -c /home/david/projects/GeneralPurposeIO/Common/DHT.cpp
+
+Common/CMakeFiles/Common.dir/DHT.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Common.dir/DHT.cpp.i"
+	cd /home/david/projects/GeneralPurposeIO/build/Common && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/david/projects/GeneralPurposeIO/Common/DHT.cpp > CMakeFiles/Common.dir/DHT.cpp.i
+
+Common/CMakeFiles/Common.dir/DHT.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Common.dir/DHT.cpp.s"
+	cd /home/david/projects/GeneralPurposeIO/build/Common && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/david/projects/GeneralPurposeIO/Common/DHT.cpp -o CMakeFiles/Common.dir/DHT.cpp.s
+
+Common/CMakeFiles/Common.dir/DHT.cpp.o.requires:
+.PHONY : Common/CMakeFiles/Common.dir/DHT.cpp.o.requires
+
+Common/CMakeFiles/Common.dir/DHT.cpp.o.provides: Common/CMakeFiles/Common.dir/DHT.cpp.o.requires
+	$(MAKE) -f Common/CMakeFiles/Common.dir/build.make Common/CMakeFiles/Common.dir/DHT.cpp.o.provides.build
+.PHONY : Common/CMakeFiles/Common.dir/DHT.cpp.o.provides
+
+Common/CMakeFiles/Common.dir/DHT.cpp.o.provides.build: Common/CMakeFiles/Common.dir/DHT.cpp.o
+
+Common/CMakeFiles/Common.dir/Scheduler.cpp.o: Common/CMakeFiles/Common.dir/flags.make
+Common/CMakeFiles/Common.dir/Scheduler.cpp.o: ../Common/Scheduler.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/projects/GeneralPurposeIO/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object Common/CMakeFiles/Common.dir/Scheduler.cpp.o"
+	cd /home/david/projects/GeneralPurposeIO/build/Common && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Common.dir/Scheduler.cpp.o -c /home/david/projects/GeneralPurposeIO/Common/Scheduler.cpp
+
+Common/CMakeFiles/Common.dir/Scheduler.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Common.dir/Scheduler.cpp.i"
+	cd /home/david/projects/GeneralPurposeIO/build/Common && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/david/projects/GeneralPurposeIO/Common/Scheduler.cpp > CMakeFiles/Common.dir/Scheduler.cpp.i
+
+Common/CMakeFiles/Common.dir/Scheduler.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Common.dir/Scheduler.cpp.s"
+	cd /home/david/projects/GeneralPurposeIO/build/Common && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/david/projects/GeneralPurposeIO/Common/Scheduler.cpp -o CMakeFiles/Common.dir/Scheduler.cpp.s
+
+Common/CMakeFiles/Common.dir/Scheduler.cpp.o.requires:
+.PHONY : Common/CMakeFiles/Common.dir/Scheduler.cpp.o.requires
+
+Common/CMakeFiles/Common.dir/Scheduler.cpp.o.provides: Common/CMakeFiles/Common.dir/Scheduler.cpp.o.requires
+	$(MAKE) -f Common/CMakeFiles/Common.dir/build.make Common/CMakeFiles/Common.dir/Scheduler.cpp.o.provides.build
+.PHONY : Common/CMakeFiles/Common.dir/Scheduler.cpp.o.provides
+
+Common/CMakeFiles/Common.dir/Scheduler.cpp.o.provides.build: Common/CMakeFiles/Common.dir/Scheduler.cpp.o
+
+Common/CMakeFiles/Common.dir/common_dht_read.c.o: Common/CMakeFiles/Common.dir/flags.make
+Common/CMakeFiles/Common.dir/common_dht_read.c.o: ../Common/common_dht_read.c
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/projects/GeneralPurposeIO/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object Common/CMakeFiles/Common.dir/common_dht_read.c.o"
+	cd /home/david/projects/GeneralPurposeIO/build/Common && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/Common.dir/common_dht_read.c.o   -c /home/david/projects/GeneralPurposeIO/Common/common_dht_read.c
+
+Common/CMakeFiles/Common.dir/common_dht_read.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Common.dir/common_dht_read.c.i"
+	cd /home/david/projects/GeneralPurposeIO/build/Common && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/david/projects/GeneralPurposeIO/Common/common_dht_read.c > CMakeFiles/Common.dir/common_dht_read.c.i
+
+Common/CMakeFiles/Common.dir/common_dht_read.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Common.dir/common_dht_read.c.s"
+	cd /home/david/projects/GeneralPurposeIO/build/Common && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/david/projects/GeneralPurposeIO/Common/common_dht_read.c -o CMakeFiles/Common.dir/common_dht_read.c.s
+
+Common/CMakeFiles/Common.dir/common_dht_read.c.o.requires:
+.PHONY : Common/CMakeFiles/Common.dir/common_dht_read.c.o.requires
+
+Common/CMakeFiles/Common.dir/common_dht_read.c.o.provides: Common/CMakeFiles/Common.dir/common_dht_read.c.o.requires
+	$(MAKE) -f Common/CMakeFiles/Common.dir/build.make Common/CMakeFiles/Common.dir/common_dht_read.c.o.provides.build
+.PHONY : Common/CMakeFiles/Common.dir/common_dht_read.c.o.provides
+
+Common/CMakeFiles/Common.dir/common_dht_read.c.o.provides.build: Common/CMakeFiles/Common.dir/common_dht_read.c.o
+
 # Object files for target Common
 Common_OBJECTS = \
-"CMakeFiles/Common.dir/GPIO.cpp.o"
+"CMakeFiles/Common.dir/GPIO.cpp.o" \
+"CMakeFiles/Common.dir/DHT.cpp.o" \
+"CMakeFiles/Common.dir/Scheduler.cpp.o" \
+"CMakeFiles/Common.dir/common_dht_read.c.o"
 
 # External object files for target Common
 Common_EXTERNAL_OBJECTS =
 
 Common/libCommon.a: Common/CMakeFiles/Common.dir/GPIO.cpp.o
+Common/libCommon.a: Common/CMakeFiles/Common.dir/DHT.cpp.o
+Common/libCommon.a: Common/CMakeFiles/Common.dir/Scheduler.cpp.o
+Common/libCommon.a: Common/CMakeFiles/Common.dir/common_dht_read.c.o
 Common/libCommon.a: Common/CMakeFiles/Common.dir/build.make
 Common/libCommon.a: Common/CMakeFiles/Common.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX static library libCommon.a"
@@ -91,6 +166,9 @@ Common/CMakeFiles/Common.dir/build: Common/libCommon.a
 .PHONY : Common/CMakeFiles/Common.dir/build
 
 Common/CMakeFiles/Common.dir/requires: Common/CMakeFiles/Common.dir/GPIO.cpp.o.requires
+Common/CMakeFiles/Common.dir/requires: Common/CMakeFiles/Common.dir/DHT.cpp.o.requires
+Common/CMakeFiles/Common.dir/requires: Common/CMakeFiles/Common.dir/Scheduler.cpp.o.requires
+Common/CMakeFiles/Common.dir/requires: Common/CMakeFiles/Common.dir/common_dht_read.c.o.requires
 .PHONY : Common/CMakeFiles/Common.dir/requires
 
 Common/CMakeFiles/Common.dir/clean:
