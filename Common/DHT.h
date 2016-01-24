@@ -2,6 +2,7 @@
 #define DHT_H
 
 #include "GPIO.h"
+#include <string>
 
 // Define errors and return values.
 #define DHT_ERROR_TIMEOUT -1
@@ -11,9 +12,9 @@
 #define DHT_SUCCESS 0
 
 // Define sensor types.
-#define DHT11 11
-#define DHT22 22
-#define AM2302 22
+//#define DHT11 11
+//#define DHT22 22
+//#define AM2302 22
 
 namespace Common
 {
@@ -27,8 +28,21 @@ namespace Common
     DHT& operator=(const DHT& other);
     bool operator==(const DHT& other) const;
     
-    int dht_read(Common::GPIO & gpio, int type, int gpio_base, int gpio_number, float* humidity, float* temperature);
+    void ReadSensor(Common::GPIO & gpio, std::string type);
     
+    float Humidity();
+    float Temperature();
+    
+    // Constants
+    const static std::string DHT11;
+    const static std::string DHT22;
+    const static std::string AM2302;
+
+  protected:
+    
+  private:
+    float _humidity;
+    float _temperature;
   };
 }
 #endif // DHT_H

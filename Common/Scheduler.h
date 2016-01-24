@@ -14,11 +14,11 @@ namespace Common
     Scheduler& operator=(const Scheduler& other);
     bool operator==(const Scheduler& other) const;
     
-    void set_max_priority(void);
-    void set_default_priority(void);
+    void SetMaxPriority(void);
+    void SetDefaultPriority(void);
     
-    static void busy_wait_milliseconds(uint32_t millis);
-    static void sleep_milliseconds(uint32_t millis); 
+    static void BusyWait(uint32_t millis);
+    static void Sleep(uint32_t millis); 
   };
 }
 #endif // SCHEDULER_H

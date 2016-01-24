@@ -28,6 +28,13 @@ namespace RaspberryPi2
     const static std::string GPIO2;
     const static std::string GPIO3;
     const static std::string GPIO4;
+
+    typedef enum tagGPIO 
+    {
+      _GPIO1 = 1,
+      _GPIO2 = 2
+    }
+    GPIOTypeEnum;
     
   protected:
     // Constructors/destructors
@@ -39,6 +46,8 @@ namespace RaspberryPi2
 
   private:
     int _gpio_number;
+
+    void SetGPIONumber(std::string pin);
     
     static const int MMIO_SUCCESS = 0;
     static const int MMIO_ERROR_DEVMEM = -1;

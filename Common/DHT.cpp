@@ -2,6 +2,7 @@
 #include "Scheduler.h"
 
 #include <iostream>
+#include <stdexcept>
 
 // This is the only processor specific magic value, the maximum amount of time to
 // spin in a loop before bailing out and considering the read a timeout.  This should
@@ -45,20 +46,31 @@ namespace Common
 
   }
   
+  // Constants
+  const std::string DHT::DHT11 = "DHT11";
+  const std::string DHT::DHT22 = "DHT22";
+  const std::string DHT::AM2302= "AM2302";
+
   // --------------------------------------------------------------------------
 
-  int DHT::dht_read(Common::GPIO & gpio, int type, int gpio_base, int gpio_number, float* humidity, float* temperature)
+  float DHT::Temperature()
   {
+    return this->_temperature;
+  }
+  
+  float DHT::Humidity()
+  {
+    return this->_humidity;
+  }
+  
+  // --------------------------------------------------------------------------
 
-    // Validate humidity and temperature arguments and set them to zero.
-    if (humidity == NULL || temperature == NULL) {
-      return DHT_ERROR_ARGUMENT;
-    }
-    
-    *temperature = 0.0f;
-    *humidity = 0.0f;
+  void DHT::ReadSensor(Common::GPIO & gpio, std::string type)
+  {
+    this->_temperature = 0.0f;
+    this->_humidity    = 0.0f;
 
-    // Initialize GPIO library.d
+    // Initialize GPIO library
     gpio.Init();
     
     Common::PulseCounts * pulseCountsObject = new Common::PulseCounts(DHT_PULSES * 2); 
@@ -71,7 +83,7 @@ namespace Common
     // Bump up process priority and change scheduler to try to try to make process more 'real time'.
     // set_max_priority();
     Common::Scheduler scheduler;  
-    scheduler.set_max_priority(); // Common::Scheduler destructor will set back to normal priority
+    scheduler.SetMaxPriority(); // Common::Scheduler destructor will set back to normal priority
 
     // Set pin high for ~500 milliseconds.
     //pi_2_mmio_set_high(pin);
@@ -101,7 +113,7 @@ namespace Common
 
     // Drop back to normal priority.
     //set_default_priority();
-    scheduler.set_default_priority();
+    scheduler.SetDefaultPriority();
 
     // Compute the average low pulse width to use as a 50 microsecond reference threshold.
     // Ignore the first two readings because they are a constant 80 microsecond pulse.
@@ -126,30 +138,36 @@ namespace Common
     }
 
     // Useful debug info:
-    std::cout << "Data:" << (int)data[0] << " " <<  (int)data[1] << " " <<  (int)data[2] << " " <<  (int)data[3] << " " <<  (int)data[4] << "\n"; // 0x%x 0x%x 0x%x 0x%x 0x%x
+    // std::cout << "Data:" << (int)data[0] << " " <<  (int)data[1] << " " <<  (int)data[2] << " " <<  (int)data[3] << " " <<  (int)data[4] << "\n"; // 0x%x 0x%x 0x%x 0x%x 0x%x
 
     // Verify checksum of received data.
     if (data[4] == ((data[0] + data[1] + data[2] + data[3]) & 0xFF)) {
-      if (type == DHT11) {
+      if (type == DHT::DHT11) 
+      {
 	// Get humidity and temp for DHT11 sensor.
-	*humidity = (float)data[0];
-	*temperature = (float)data[2];
+	this->_humidity = (float)data[0];
+	this->_temperature = (float)data[2];
       }
-      else if (type == DHT22) {
+      else if (type == DHT::DHT22 ||
+	       type == DHT::AM2302)
+      {
 	// Calculate humidity and temp for DHT22 sensor.
-	*humidity = (data[0] * 256 + data[1]) / 10.0f;
-	*temperature = ((data[2] & 0x7F) * 256 + data[3]) / 10.0f;
-	if (data[2] & 0x80) {
-	  *temperature *= -1.0f;
+	this->_humidity = (data[0] * 256 + data[1]) / 10.0f;
+	this->_temperature = ((data[2] & 0x7F) * 256 + data[3]) / 10.0f;
+	if (data[2] & 0x80) 
+	{
+	  this->_temperature *= -1.0f;
 	}
       }
-      std::cout << "Humidity:" << *humidity << "; " <<  "Temperature:" << " " <<  *temperature;
-      return DHT_SUCCESS;
+      // std::cout << "Humidity:" << this->_humidity << "; " <<  "Temperature:" << " " <<  this->_temperature;
+      // return DHT_SUCCESS;
     }
-    else {
-      return DHT_ERROR_CHECKSUM;
+    else 
+    {
+      throw std::logic_error("Checksum failed");
     }    
-    return DHT_SUCCESS;
+    
+    //return DHT_SUCCESS;
   }
 
 } // end namespace Common

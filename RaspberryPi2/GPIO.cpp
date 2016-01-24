@@ -46,10 +46,7 @@ namespace RaspberryPi2
   GPIO::GPIO(std::string pin) : Common::GPIO(pin)
   {
     this->Init();
-    if      (pin == GPIO::GPIO1) {_gpio_number = 1;}
-    else if (pin == GPIO::GPIO2) {_gpio_number = 2;}
-    else if (pin == GPIO::GPIO3) {_gpio_number = 3;}
-    else if (pin == GPIO::GPIO4) {_gpio_number = 4;}
+    this->SetGPIONumber(pin);
   }
   
   const std::string GPIO::GPIO1 = "GPIO1";
@@ -63,6 +60,14 @@ namespace RaspberryPi2
     {
       throw std::logic_error("Unable to initialize GPIO memory map");
     }
+  }
+  
+  void GPIO::SetGPIONumber(std::string pin)
+  {
+    if      (pin == GPIO::GPIO1) {_gpio_number = 1;}
+    else if (pin == GPIO::GPIO2) {_gpio_number = 2;}
+    else if (pin == GPIO::GPIO3) {_gpio_number = 3;}
+    else if (pin == GPIO::GPIO4) {_gpio_number = 4;}
   }
   
   void GPIO::SetOutput()
@@ -105,7 +110,7 @@ namespace RaspberryPi2
       if (++count >= maxCount) {
 	// Timeout waiting for response.
 	//set_default_priority();
-	return; // DHT_ERROR_TIMEOUT;
+	throw std::runtime_error("Timeout waiting for pin to be pulled low"); // return; // DHT_ERROR_TIMEOUT;
       }
     }
 
@@ -116,7 +121,7 @@ namespace RaspberryPi2
 	if (++pulseCounts[i] >= maxCount) {
 	  // Timeout waiting for response.
 	  //set_default_priority();
-	  return; //  DHT_ERROR_TIMEOUT;
+	  throw std::runtime_error("Timeout waiting for pin to be pulled high");// return; //  DHT_ERROR_TIMEOUT;
 	}
       }
       // Count how long pin is high and store in pulseCounts[i+1]
@@ -124,7 +129,7 @@ namespace RaspberryPi2
 	if (++pulseCounts[i+1] >= maxCount) {
 	  // Timeout waiting for response.
 	  //set_default_priority();
-	  return; //  DHT_ERROR_TIMEOUT;
+	  throw std::runtime_error("Timeout waiting for pin to be pulled low"); // return; //  DHT_ERROR_TIMEOUT;
 	}
       }
     }

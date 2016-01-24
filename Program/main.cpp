@@ -4,15 +4,15 @@
 #include "../Common/DHT.h"
 #include "../RaspberryPi2/GPIO.h"
 #include <string>
+#include <memory>
 
 #include <cxxabi.h>
 #include <cstdlib>
 
-int main(int argc, char **argv) {
- 
-    try
-    {
-      std::string pin = "R7";
+void GPIOTest()
+{
+  try
+  {
       Common::GPIO * gpio = new RaspberryPi2::GPIO(RaspberryPi2::GPIO::GPIO4);
       gpio->SetOutput();
       gpio->SetHigh(20);
@@ -33,17 +33,38 @@ int main(int argc, char **argv) {
 	count++;
       }
       std::cout << "GPIO read low" << count << " times.\r\n";
-      
-      std::cout << "Hello, GPIO! " << gpio->Pin() << std::endl;
+  }
+    catch (const std::exception& ex)  
+    {
+      std::cout << "std::exception returned. " << ex.what();
+    }
+    catch (int e)
+    {
+      std::cout << "Error #" << e;
+    }
+    catch (...)
+    {
+      std::cout << "Unknown exception caught";
+      std::cout << "\nUnknown exception type: '" << __cxxabiv1::__cxa_current_exception_type()->name() << "'" << std::endl;
+    }
+}
 
-      Common::DHT & dht = *(new Common::DHT());
-      
-      float humidity;
-      float temperature;
-      dht.dht_read(*gpio, 22 /*int type*/, 0x3000/*int gpio_base*/, 0/*int gpio_number*/, &humidity, &temperature);
-      
+int main(int argc, char **argv) {
+ 
+    try
+    {
+      std::auto_ptr<Common::GPIO> gp(new RaspberryPi2::GPIO(RaspberryPi2::GPIO::GPIO4));
+      //Common::GPIO * gpio = new RaspberryPi2::GPIO(RaspberryPi2::GPIO::GPIO4);
+      std::cout << "Hello, GPIO! " << gp->Pin() << std::endl;
 
-      delete gpio;
+      Common::DHT dht;// = new Common::DHT();
+      dht.ReadSensor(*gp, Common::DHT::DHT22); 
+
+      std::cout << "Caller received. Temp:" 
+                << dht.Temperature() << "C (" << (dht.Temperature() * 9.0f / 5.0f) + 32 << "F)" 
+                << "; Humidity:" << dht.Humidity();
+
+      //delete gpio;
     }
     catch (const std::exception& ex)  
     {
@@ -58,10 +79,6 @@ int main(int argc, char **argv) {
       std::cout << "Unknown exception caught";
       std::cout << "\nUnknown exception type: '" << __cxxabiv1::__cxa_current_exception_type()->name() << "'" << std::endl;
     }
-    
-    Common::Scheduler scheduler;
-    scheduler.set_max_priority();
-    
     
     return 0;
 }

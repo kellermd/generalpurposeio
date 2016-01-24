@@ -6,7 +6,9 @@
 
 #include "Scheduler.h"
 
-namespace Common {
+namespace Common 
+{
+
   Scheduler::Scheduler()
   {
 
@@ -19,7 +21,7 @@ namespace Common {
 
   Scheduler::~Scheduler()
   {
-    set_default_priority();
+    SetDefaultPriority();
   }
 
   Scheduler& Scheduler::operator=(const Scheduler& other)
@@ -34,7 +36,7 @@ namespace Common {
   
   // --------------------------------------------------------------------------
 
-  void Scheduler::busy_wait_milliseconds(uint32_t millis) 
+  void Scheduler::BusyWait(uint32_t millis) 
   {
     // Set delay time period.
     struct timeval deltatime;
@@ -51,14 +53,14 @@ namespace Common {
     }
   }
 
-  void Scheduler::sleep_milliseconds(uint32_t millis) {
+  void Scheduler::Sleep(uint32_t millis) {
     struct timespec sleep;
     sleep.tv_sec = millis / 1000;
     sleep.tv_nsec = (millis % 1000) * 1000000L;
     while (clock_nanosleep(CLOCK_MONOTONIC, 0, &sleep, &sleep) && errno == EINTR);
   }
 
-  void Scheduler::set_max_priority(void) {
+  void Scheduler::SetMaxPriority(void) {
     struct sched_param sched;
     memset(&sched, 0, sizeof(sched));
     // Use FIFO scheduler with highest priority for the lowest chance of the kernel context switching.
@@ -66,7 +68,7 @@ namespace Common {
     sched_setscheduler(0, SCHED_FIFO, &sched);
   }
 
-  void Scheduler::set_default_priority(void) {
+  void Scheduler::SetDefaultPriority(void) {
     struct sched_param sched;
     memset(&sched, 0, sizeof(sched));
     // Go back to default scheduler with default 0 priority.
