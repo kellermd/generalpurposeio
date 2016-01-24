@@ -1,2 +1,2 @@
-/usr/bin/ar cq libRaspberryPi2.a  CMakeFiles/RaspberryPi2.dir/GPIO.cpp.o CMakeFiles/RaspberryPi2.dir/pi_2_mmio.c.o CMakeFiles/RaspberryPi2.dir/pi_2_dht_read.c.o
+/usr/bin/ar cr libRaspberryPi2.a  CMakeFiles/RaspberryPi2.dir/GPIO.cpp.o
 /usr/bin/ranlib libRaspberryPi2.a

@@ -1,4 +1,4 @@
-# Install script for directory: /home/david/projects/GeneralPurposeIO/RaspberryPi2
+# Install script for directory: /home/pi/projects/GeneralPurposeIO/RaspberryPi2
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

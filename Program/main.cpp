@@ -13,21 +13,35 @@ int main(int argc, char **argv) {
     try
     {
       std::string pin = "R7";
-      Common::GPIO * gpio = new RaspberryPi2::GPIO(RaspberryPi2::GPIO::GPIO2);
-      //new Common::GPIO(RaspberryPi2::GPIO::GPIO4);
-      //gpio->rPin() = RaspberryPi2::GPIO::GPIO4;
-      std::cout << "Hello, world! " << gpio->Pin() << std::endl;
+      Common::GPIO * gpio = new RaspberryPi2::GPIO(RaspberryPi2::GPIO::GPIO4);
+      gpio->SetOutput();
+      gpio->SetHigh(20);
+      gpio->SetLow(20);
+      gpio->SetInput();
+      
+      int maxCount = 10000;
+      int count = 0;
+      while (gpio->GetValue() && count < maxCount)
+      {
+	count++;
+      }
+      std::cout << "GPIO read high" << count << " times.\r\n";
+      
+      count = 0;
+      while (!gpio->GetValue() && count < maxCount)
+      {
+	count++;
+      }
+      std::cout << "GPIO read low" << count << " times.\r\n";
+      
+      std::cout << "Hello, GPIO! " << gpio->Pin() << std::endl;
 
       Common::DHT & dht = *(new Common::DHT());
       
       float humidity;
       float temperature;
-      dht.dht_read(*gpio, 0 /*int type*/, 0x3000/*int gpio_base*/, 0/*int gpio_number*/, &humidity, &temperature);
+      dht.dht_read(*gpio, 22 /*int type*/, 0x3000/*int gpio_base*/, 0/*int gpio_number*/, &humidity, &temperature);
       
-      gpio->SetInput();
-      gpio->SetOutput();
-      gpio->SetHigh(20);
-      gpio->SetLow(20);
 
       delete gpio;
     }

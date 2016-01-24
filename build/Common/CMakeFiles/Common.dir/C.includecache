@@ -6,21 +6,3 @@
 
 #IncludeRegexTransform: 
 
-/home/david/projects/GeneralPurposeIO/Common/common_dht_read.c
-errno.h
--
-sched.h
--
-string.h
--
-sys/time.h
--
-time.h
--
-common_dht_read.h
-/home/david/projects/GeneralPurposeIO/Common/common_dht_read.h
-
-/home/david/projects/GeneralPurposeIO/Common/common_dht_read.h
-stdint.h
--
-

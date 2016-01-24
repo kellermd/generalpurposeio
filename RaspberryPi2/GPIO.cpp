@@ -1,6 +1,6 @@
 #include "GPIO.h"
 #include "../Common/GPIO.h"
-#include "pi_2_mmio.h"
+//#include "pi_2_mmio.h"
 #include <fcntl.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -85,6 +85,49 @@ namespace RaspberryPi2
   {
     pi_2_mmio_set_low(this->_gpio_number);
     this->busy_wait_milliseconds(millis);
+  }
+
+  int GPIO::GetValue()
+  {
+    return pi_2_mmio_input(_gpio_number);
+  }
+
+  
+  void GPIO::ReadPulseCounts(Common::PulseCounts & pulseCountsObject, int maxCount)
+  {
+    int * pulseCounts = pulseCountsObject.rArray();
+    int pulseCountsArraySize = pulseCountsObject.Count();
+    int _gpio_number = this->_gpio_number;
+    
+    // Wait for DHT to pull pin low.
+    uint32_t count = 0;
+    while (pi_2_mmio_input(_gpio_number)) {
+      if (++count >= maxCount) {
+	// Timeout waiting for response.
+	//set_default_priority();
+	return; // DHT_ERROR_TIMEOUT;
+      }
+    }
+
+    // Record pulse widths for the expected result bits.
+    for (int i=0; i < pulseCountsArraySize; i+=2) {
+      // Count how long pin is low and store in pulseCounts[i]
+      while (!pi_2_mmio_input(_gpio_number)) {
+	if (++pulseCounts[i] >= maxCount) {
+	  // Timeout waiting for response.
+	  //set_default_priority();
+	  return; //  DHT_ERROR_TIMEOUT;
+	}
+      }
+      // Count how long pin is high and store in pulseCounts[i+1]
+      while (pi_2_mmio_input(_gpio_number)) {
+	if (++pulseCounts[i+1] >= maxCount) {
+	  // Timeout waiting for response.
+	  //set_default_priority();
+	  return; //  DHT_ERROR_TIMEOUT;
+	}
+      }
+    }
   }
   
   volatile uint32_t* GPIO::pi_2_mmio_gpio = NULL;

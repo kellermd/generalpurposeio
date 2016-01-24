@@ -1,4 +1,4 @@
-# Install script for directory: /home/david/projects/GeneralPurposeIO
+# Install script for directory: /home/pi/projects/GeneralPurposeIO
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/generalpurposeio"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/david/projects/GeneralPurposeIO/build/generalpurposeio")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/pi/projects/GeneralPurposeIO/build/generalpurposeio")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/generalpurposeio" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/generalpurposeio")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -50,9 +50,9 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/david/projects/GeneralPurposeIO/build/Common/cmake_install.cmake")
-  include("/home/david/projects/GeneralPurposeIO/build/RaspberryPi2/cmake_install.cmake")
-  include("/home/david/projects/GeneralPurposeIO/build/Program/cmake_install.cmake")
+  include("/home/pi/projects/GeneralPurposeIO/build/Common/cmake_install.cmake")
+  include("/home/pi/projects/GeneralPurposeIO/build/RaspberryPi2/cmake_install.cmake")
+  include("/home/pi/projects/GeneralPurposeIO/build/Program/cmake_install.cmake")
 
 endif()
 
@@ -62,7 +62,7 @@ else()
   set(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
 endif()
 
-string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
-       "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/david/projects/GeneralPurposeIO/build/${CMAKE_INSTALL_MANIFEST}"
-     "${CMAKE_INSTALL_MANIFEST_CONTENT}")
+file(WRITE "/home/pi/projects/GeneralPurposeIO/build/${CMAKE_INSTALL_MANIFEST}" "")
+foreach(file ${CMAKE_INSTALL_MANIFEST_FILES})
+  file(APPEND "/home/pi/projects/GeneralPurposeIO/build/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
+endforeach()

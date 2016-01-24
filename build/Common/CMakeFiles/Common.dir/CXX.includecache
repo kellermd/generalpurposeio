@@ -6,21 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/home/david/projects/GeneralPurposeIO/Common/DHT.cpp
+/home/pi/projects/GeneralPurposeIO/Common/DHT.cpp
 DHT.h
-/home/david/projects/GeneralPurposeIO/Common/DHT.h
+/home/pi/projects/GeneralPurposeIO/Common/DHT.h
 Scheduler.h
-/home/david/projects/GeneralPurposeIO/Common/Scheduler.h
+/home/pi/projects/GeneralPurposeIO/Common/Scheduler.h
+iostream
+-
 
-/home/david/projects/GeneralPurposeIO/Common/DHT.h
+/home/pi/projects/GeneralPurposeIO/Common/DHT.h
 GPIO.h
-/home/david/projects/GeneralPurposeIO/Common/GPIO.h
+/home/pi/projects/GeneralPurposeIO/Common/GPIO.h
 
-/home/david/projects/GeneralPurposeIO/Common/GPIO.cpp
-GPIO.h
-/home/david/projects/GeneralPurposeIO/Common/GPIO.h
-
-/home/david/projects/GeneralPurposeIO/Common/GPIO.h
+/home/pi/projects/GeneralPurposeIO/Common/GPIO.h
 string
 -
 list
@@ -36,21 +34,7 @@ string.h
 sys/time.h
 -
 
-/home/david/projects/GeneralPurposeIO/Common/Scheduler.cpp
-errno.h
--
-sched.h
--
-string.h
--
-sys/time.h
--
-time.h
--
-Scheduler.h
-/home/david/projects/GeneralPurposeIO/Common/Scheduler.h
-
-/home/david/projects/GeneralPurposeIO/Common/Scheduler.h
+/home/pi/projects/GeneralPurposeIO/Common/Scheduler.h
 stdint.h
 -
 

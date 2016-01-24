@@ -1,4 +1,4 @@
-# Install script for directory: /home/david/projects/GeneralPurposeIO/Program
+# Install script for directory: /home/pi/projects/GeneralPurposeIO/Program
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

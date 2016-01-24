@@ -11,6 +11,24 @@
 
 namespace Common
 {
+  class PulseCounts 
+  {
+  public:
+    PulseCounts(int count);
+    int * & rArray();
+    int * Array();
+    int Count();
+    
+  protected:
+    PulseCounts();
+    
+  private:
+    int * _pulseCounts;
+    int _count;
+  };
+
+  // --------------------------------------------------------------------------
+
   class GPIO
   {
   public:
@@ -29,6 +47,8 @@ namespace Common
     virtual void SetInput()=0;
     virtual void SetHigh(int millis)=0;
     virtual void SetLow (int millis)=0;
+    virtual int  GetValue()=0;
+    virtual void ReadPulseCounts(Common::PulseCounts & pulseCountsObject, int maxCount)=0;
     
   protected:
     void sleep_milliseconds(uint32_t millis);
@@ -37,24 +57,7 @@ namespace Common
   private:
     std::string _pin;
   };
-
-  // --------------------------------------------------------------------------
   
-  class PulseCounts 
-  {
-  public:
-    PulseCounts(int count);
-    int * & rArray();
-    int * Array();
-    int Count();
-    
-  protected:
-    PulseCounts();
-    
-  private:
-    int * _pulseCounts;
-    int _count;
-  };
-}
+} // end namespace Common
 
 #endif // GPIO_H

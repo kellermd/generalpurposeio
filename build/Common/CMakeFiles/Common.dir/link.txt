@@ -1,2 +1,2 @@
-/usr/bin/ar cq libCommon.a  CMakeFiles/Common.dir/GPIO.cpp.o CMakeFiles/Common.dir/DHT.cpp.o CMakeFiles/Common.dir/Scheduler.cpp.o CMakeFiles/Common.dir/common_dht_read.c.o
+/usr/bin/ar cr libCommon.a  CMakeFiles/Common.dir/DHT.cpp.o CMakeFiles/Common.dir/Scheduler.cpp.o CMakeFiles/Common.dir/GPIO.cpp.o CMakeFiles/Common.dir/common_dht_read.c.o
 /usr/bin/ranlib libCommon.a

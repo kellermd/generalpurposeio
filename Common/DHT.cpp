@@ -1,6 +1,8 @@
 #include "DHT.h"
 #include "Scheduler.h"
 
+#include <iostream>
+
 // This is the only processor specific magic value, the maximum amount of time to
 // spin in a loop before bailing out and considering the read a timeout.  This should
 // be a high value, but if you're running on a much faster platform than a Raspberry
@@ -59,7 +61,7 @@ namespace Common
     // Initialize GPIO library.d
     gpio.Init();
     
-    Common::PulseCounts * pulseCountsObject = new Common::PulseCounts(DHT_PULSES); 
+    Common::PulseCounts * pulseCountsObject = new Common::PulseCounts(DHT_PULSES * 2); 
     int * & pulseCountsArray = pulseCountsObject->rArray();
 
     // Set pin to output.
@@ -87,44 +89,15 @@ namespace Common
     
     // Set pin at input.
     // pi_2_mmio_set_input(pin);
-    // Need a very short delay before reading pins or else value is sometimes still low.
-    //for (volatile int i = 0; i < 50; ++i) {
-    //}
     gpio.SetInput();
 
-    /* ***********************************************************************************************
-    // Wait for DHT to pull pin low.
-    uint32_t count = 0;
-    while (pi_2_mmio_input(pin)) {
-      if (++count >= DHT_MAXCOUNT) {
-	// Timeout waiting for response.
-	set_default_priority();
-	return DHT_ERROR_TIMEOUT;
-      }
+    // Need a very short delay before reading pins or else value is sometimes still low.
+    for (volatile int i = 0; i < 50; ++i) {
     }
 
-    // Record pulse widths for the expected result bits.
-    for (int i=0; i < DHT_PULSES*2; i+=2) {
-      // Count how long pin is low and store in pulseCounts[i]
-      while (!pi_2_mmio_input(pin)) {
-	if (++pulseCounts[i] >= DHT_MAXCOUNT) {
-	  // Timeout waiting for response.
-	  set_default_priority();
-	  return DHT_ERROR_TIMEOUT;
-	}
-      }
-      // Count how long pin is high and store in pulseCounts[i+1]
-      while (pi_2_mmio_input(pin)) {
-	if (++pulseCounts[i+1] >= DHT_MAXCOUNT) {
-	  // Timeout waiting for response.
-	  set_default_priority();
-	  return DHT_ERROR_TIMEOUT;
-	}
-      }
-    }
+    gpio.ReadPulseCounts(*pulseCountsObject, (int)DHT_MAXCOUNT);
 
     // Done with timing critical code, now interpret the results.
-  *********************************************************************************************** */   
 
     // Drop back to normal priority.
     //set_default_priority();
@@ -153,7 +126,7 @@ namespace Common
     }
 
     // Useful debug info:
-    //printf("Data: 0x%x 0x%x 0x%x 0x%x 0x%x\n", data[0], data[1], data[2], data[3], data[4]);
+    std::cout << "Data:" << (int)data[0] << " " <<  (int)data[1] << " " <<  (int)data[2] << " " <<  (int)data[3] << " " <<  (int)data[4] << "\n"; // 0x%x 0x%x 0x%x 0x%x 0x%x
 
     // Verify checksum of received data.
     if (data[4] == ((data[0] + data[1] + data[2] + data[3]) & 0xFF)) {
@@ -170,6 +143,7 @@ namespace Common
 	  *temperature *= -1.0f;
 	}
       }
+      std::cout << "Humidity:" << *humidity << "; " <<  "Temperature:" << " " <<  *temperature;
       return DHT_SUCCESS;
     }
     else {

@@ -20,6 +20,8 @@ namespace RaspberryPi2
     void SetInput();
     void SetHigh(int millis);
     void SetLow (int millis);
+    int  GetValue();
+    void ReadPulseCounts(Common::PulseCounts & pulseCountsObject, int maxCount);
 
     // Constants
     const static std::string GPIO1;
