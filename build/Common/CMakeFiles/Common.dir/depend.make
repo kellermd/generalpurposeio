@@ -12,6 +12,11 @@ Common/CMakeFiles/Common.dir/DHT.cpp.o: ../Common/Scheduler.h
 Common/CMakeFiles/Common.dir/GPIO.cpp.o: ../Common/GPIO.cpp
 Common/CMakeFiles/Common.dir/GPIO.cpp.o: ../Common/GPIO.h
 
+Common/CMakeFiles/Common.dir/HCSR04.cpp.o: ../Common/GPIO.h
+Common/CMakeFiles/Common.dir/HCSR04.cpp.o: ../Common/HCSR04.cpp
+Common/CMakeFiles/Common.dir/HCSR04.cpp.o: ../Common/HCSR04.h
+Common/CMakeFiles/Common.dir/HCSR04.cpp.o: ../Common/Scheduler.h
+
 Common/CMakeFiles/Common.dir/Scheduler.cpp.o: ../Common/Scheduler.cpp
 Common/CMakeFiles/Common.dir/Scheduler.cpp.o: ../Common/Scheduler.h
 

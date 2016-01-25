@@ -28,6 +28,8 @@ namespace RaspberryPi2
     const static std::string GPIO2;
     const static std::string GPIO3;
     const static std::string GPIO4;
+    const static std::string GPI23;
+    const static std::string GPI24;
 
     typedef enum tagGPIO 
     {

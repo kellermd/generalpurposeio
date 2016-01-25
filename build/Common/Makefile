@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/pi/projects/GeneralPurposeIO
+CMAKE_SOURCE_DIR = /home/david/projects/GeneralPurposeIO
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/pi/projects/GeneralPurposeIO/build
+CMAKE_BINARY_DIR = /home/david/projects/GeneralPurposeIO/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -114,14 +114,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/pi/projects/GeneralPurposeIO/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/pi/projects/GeneralPurposeIO/build/CMakeFiles /home/pi/projects/GeneralPurposeIO/build/Common/CMakeFiles/progress.marks
-	cd /home/pi/projects/GeneralPurposeIO/build && $(MAKE) -f CMakeFiles/Makefile2 Common/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/projects/GeneralPurposeIO/build/CMakeFiles 0
+	cd /home/david/projects/GeneralPurposeIO/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/david/projects/GeneralPurposeIO/build/CMakeFiles /home/david/projects/GeneralPurposeIO/build/Common/CMakeFiles/progress.marks
+	cd /home/david/projects/GeneralPurposeIO/build && $(MAKE) -f CMakeFiles/Makefile2 Common/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/david/projects/GeneralPurposeIO/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/pi/projects/GeneralPurposeIO/build && $(MAKE) -f CMakeFiles/Makefile2 Common/clean
+	cd /home/david/projects/GeneralPurposeIO/build && $(MAKE) -f CMakeFiles/Makefile2 Common/clean
 .PHONY : clean
 
 # The main clean target
@@ -130,22 +130,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/pi/projects/GeneralPurposeIO/build && $(MAKE) -f CMakeFiles/Makefile2 Common/preinstall
+	cd /home/david/projects/GeneralPurposeIO/build && $(MAKE) -f CMakeFiles/Makefile2 Common/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/pi/projects/GeneralPurposeIO/build && $(MAKE) -f CMakeFiles/Makefile2 Common/preinstall
+	cd /home/david/projects/GeneralPurposeIO/build && $(MAKE) -f CMakeFiles/Makefile2 Common/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/pi/projects/GeneralPurposeIO/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/david/projects/GeneralPurposeIO/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 Common/CMakeFiles/Common.dir/rule:
-	cd /home/pi/projects/GeneralPurposeIO/build && $(MAKE) -f CMakeFiles/Makefile2 Common/CMakeFiles/Common.dir/rule
+	cd /home/david/projects/GeneralPurposeIO/build && $(MAKE) -f CMakeFiles/Makefile2 Common/CMakeFiles/Common.dir/rule
 .PHONY : Common/CMakeFiles/Common.dir/rule
 
 # Convenience name for target.
@@ -154,7 +154,7 @@ Common: Common/CMakeFiles/Common.dir/rule
 
 # fast build rule for target.
 Common/fast:
-	cd /home/pi/projects/GeneralPurposeIO/build && $(MAKE) -f Common/CMakeFiles/Common.dir/build.make Common/CMakeFiles/Common.dir/build
+	cd /home/david/projects/GeneralPurposeIO/build && $(MAKE) -f Common/CMakeFiles/Common.dir/build.make Common/CMakeFiles/Common.dir/build
 .PHONY : Common/fast
 
 DHT.o: DHT.cpp.o
@@ -162,7 +162,7 @@ DHT.o: DHT.cpp.o
 
 # target to build an object file
 DHT.cpp.o:
-	cd /home/pi/projects/GeneralPurposeIO/build && $(MAKE) -f Common/CMakeFiles/Common.dir/build.make Common/CMakeFiles/Common.dir/DHT.cpp.o
+	cd /home/david/projects/GeneralPurposeIO/build && $(MAKE) -f Common/CMakeFiles/Common.dir/build.make Common/CMakeFiles/Common.dir/DHT.cpp.o
 .PHONY : DHT.cpp.o
 
 DHT.i: DHT.cpp.i
@@ -170,7 +170,7 @@ DHT.i: DHT.cpp.i
 
 # target to preprocess a source file
 DHT.cpp.i:
-	cd /home/pi/projects/GeneralPurposeIO/build && $(MAKE) -f Common/CMakeFiles/Common.dir/build.make Common/CMakeFiles/Common.dir/DHT.cpp.i
+	cd /home/david/projects/GeneralPurposeIO/build && $(MAKE) -f Common/CMakeFiles/Common.dir/build.make Common/CMakeFiles/Common.dir/DHT.cpp.i
 .PHONY : DHT.cpp.i
 
 DHT.s: DHT.cpp.s
@@ -178,7 +178,7 @@ DHT.s: DHT.cpp.s
 
 # target to generate assembly for a file
 DHT.cpp.s:
-	cd /home/pi/projects/GeneralPurposeIO/build && $(MAKE) -f Common/CMakeFiles/Common.dir/build.make Common/CMakeFiles/Common.dir/DHT.cpp.s
+	cd /home/david/projects/GeneralPurposeIO/build && $(MAKE) -f Common/CMakeFiles/Common.dir/build.make Common/CMakeFiles/Common.dir/DHT.cpp.s
 .PHONY : DHT.cpp.s
 
 GPIO.o: GPIO.cpp.o
@@ -186,7 +186,7 @@ GPIO.o: GPIO.cpp.o
 
 # target to build an object file
 GPIO.cpp.o:
-	cd /home/pi/projects/GeneralPurposeIO/build && $(MAKE) -f Common/CMakeFiles/Common.dir/build.make Common/CMakeFiles/Common.dir/GPIO.cpp.o
+	cd /home/david/projects/GeneralPurposeIO/build && $(MAKE) -f Common/CMakeFiles/Common.dir/build.make Common/CMakeFiles/Common.dir/GPIO.cpp.o
 .PHONY : GPIO.cpp.o
 
 GPIO.i: GPIO.cpp.i
@@ -194,7 +194,7 @@ GPIO.i: GPIO.cpp.i
 
 # target to preprocess a source file
 GPIO.cpp.i:
-	cd /home/pi/projects/GeneralPurposeIO/build && $(MAKE) -f Common/CMakeFiles/Common.dir/build.make Common/CMakeFiles/Common.dir/GPIO.cpp.i
+	cd /home/david/projects/GeneralPurposeIO/build && $(MAKE) -f Common/CMakeFiles/Common.dir/build.make Common/CMakeFiles/Common.dir/GPIO.cpp.i
 .PHONY : GPIO.cpp.i
 
 GPIO.s: GPIO.cpp.s
@@ -202,15 +202,39 @@ GPIO.s: GPIO.cpp.s
 
 # target to generate assembly for a file
 GPIO.cpp.s:
-	cd /home/pi/projects/GeneralPurposeIO/build && $(MAKE) -f Common/CMakeFiles/Common.dir/build.make Common/CMakeFiles/Common.dir/GPIO.cpp.s
+	cd /home/david/projects/GeneralPurposeIO/build && $(MAKE) -f Common/CMakeFiles/Common.dir/build.make Common/CMakeFiles/Common.dir/GPIO.cpp.s
 .PHONY : GPIO.cpp.s
+
+HCSR04.o: HCSR04.cpp.o
+.PHONY : HCSR04.o
+
+# target to build an object file
+HCSR04.cpp.o:
+	cd /home/david/projects/GeneralPurposeIO/build && $(MAKE) -f Common/CMakeFiles/Common.dir/build.make Common/CMakeFiles/Common.dir/HCSR04.cpp.o
+.PHONY : HCSR04.cpp.o
+
+HCSR04.i: HCSR04.cpp.i
+.PHONY : HCSR04.i
+
+# target to preprocess a source file
+HCSR04.cpp.i:
+	cd /home/david/projects/GeneralPurposeIO/build && $(MAKE) -f Common/CMakeFiles/Common.dir/build.make Common/CMakeFiles/Common.dir/HCSR04.cpp.i
+.PHONY : HCSR04.cpp.i
+
+HCSR04.s: HCSR04.cpp.s
+.PHONY : HCSR04.s
+
+# target to generate assembly for a file
+HCSR04.cpp.s:
+	cd /home/david/projects/GeneralPurposeIO/build && $(MAKE) -f Common/CMakeFiles/Common.dir/build.make Common/CMakeFiles/Common.dir/HCSR04.cpp.s
+.PHONY : HCSR04.cpp.s
 
 Scheduler.o: Scheduler.cpp.o
 .PHONY : Scheduler.o
 
 # target to build an object file
 Scheduler.cpp.o:
-	cd /home/pi/projects/GeneralPurposeIO/build && $(MAKE) -f Common/CMakeFiles/Common.dir/build.make Common/CMakeFiles/Common.dir/Scheduler.cpp.o
+	cd /home/david/projects/GeneralPurposeIO/build && $(MAKE) -f Common/CMakeFiles/Common.dir/build.make Common/CMakeFiles/Common.dir/Scheduler.cpp.o
 .PHONY : Scheduler.cpp.o
 
 Scheduler.i: Scheduler.cpp.i
@@ -218,7 +242,7 @@ Scheduler.i: Scheduler.cpp.i
 
 # target to preprocess a source file
 Scheduler.cpp.i:
-	cd /home/pi/projects/GeneralPurposeIO/build && $(MAKE) -f Common/CMakeFiles/Common.dir/build.make Common/CMakeFiles/Common.dir/Scheduler.cpp.i
+	cd /home/david/projects/GeneralPurposeIO/build && $(MAKE) -f Common/CMakeFiles/Common.dir/build.make Common/CMakeFiles/Common.dir/Scheduler.cpp.i
 .PHONY : Scheduler.cpp.i
 
 Scheduler.s: Scheduler.cpp.s
@@ -226,7 +250,7 @@ Scheduler.s: Scheduler.cpp.s
 
 # target to generate assembly for a file
 Scheduler.cpp.s:
-	cd /home/pi/projects/GeneralPurposeIO/build && $(MAKE) -f Common/CMakeFiles/Common.dir/build.make Common/CMakeFiles/Common.dir/Scheduler.cpp.s
+	cd /home/david/projects/GeneralPurposeIO/build && $(MAKE) -f Common/CMakeFiles/Common.dir/build.make Common/CMakeFiles/Common.dir/Scheduler.cpp.s
 .PHONY : Scheduler.cpp.s
 
 common_dht_read.o: common_dht_read.c.o
@@ -234,7 +258,7 @@ common_dht_read.o: common_dht_read.c.o
 
 # target to build an object file
 common_dht_read.c.o:
-	cd /home/pi/projects/GeneralPurposeIO/build && $(MAKE) -f Common/CMakeFiles/Common.dir/build.make Common/CMakeFiles/Common.dir/common_dht_read.c.o
+	cd /home/david/projects/GeneralPurposeIO/build && $(MAKE) -f Common/CMakeFiles/Common.dir/build.make Common/CMakeFiles/Common.dir/common_dht_read.c.o
 .PHONY : common_dht_read.c.o
 
 common_dht_read.i: common_dht_read.c.i
@@ -242,7 +266,7 @@ common_dht_read.i: common_dht_read.c.i
 
 # target to preprocess a source file
 common_dht_read.c.i:
-	cd /home/pi/projects/GeneralPurposeIO/build && $(MAKE) -f Common/CMakeFiles/Common.dir/build.make Common/CMakeFiles/Common.dir/common_dht_read.c.i
+	cd /home/david/projects/GeneralPurposeIO/build && $(MAKE) -f Common/CMakeFiles/Common.dir/build.make Common/CMakeFiles/Common.dir/common_dht_read.c.i
 .PHONY : common_dht_read.c.i
 
 common_dht_read.s: common_dht_read.c.s
@@ -250,7 +274,7 @@ common_dht_read.s: common_dht_read.c.s
 
 # target to generate assembly for a file
 common_dht_read.c.s:
-	cd /home/pi/projects/GeneralPurposeIO/build && $(MAKE) -f Common/CMakeFiles/Common.dir/build.make Common/CMakeFiles/Common.dir/common_dht_read.c.s
+	cd /home/david/projects/GeneralPurposeIO/build && $(MAKE) -f Common/CMakeFiles/Common.dir/build.make Common/CMakeFiles/Common.dir/common_dht_read.c.s
 .PHONY : common_dht_read.c.s
 
 # Help Target
@@ -272,6 +296,9 @@ help:
 	@echo "... GPIO.o"
 	@echo "... GPIO.i"
 	@echo "... GPIO.s"
+	@echo "... HCSR04.o"
+	@echo "... HCSR04.i"
+	@echo "... HCSR04.s"
 	@echo "... Scheduler.o"
 	@echo "... Scheduler.i"
 	@echo "... Scheduler.s"
@@ -289,6 +316,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/pi/projects/GeneralPurposeIO/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/david/projects/GeneralPurposeIO/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

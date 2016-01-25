@@ -4,13 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/pi/projects/GeneralPurposeIO/RaspberryPi2/GPIO.cpp" "/home/pi/projects/GeneralPurposeIO/build/RaspberryPi2/CMakeFiles/RaspberryPi2.dir/GPIO.cpp.o"
+  "/home/david/projects/GeneralPurposeIO/RaspberryPi2/GPIO.cpp" "/home/david/projects/GeneralPurposeIO/build/RaspberryPi2/CMakeFiles/RaspberryPi2.dir/GPIO.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/pi/projects/GeneralPurposeIO/build/Common/CMakeFiles/Common.dir/DependInfo.cmake"
+  "/home/david/projects/GeneralPurposeIO/build/Common/CMakeFiles/Common.dir/DependInfo.cmake"
   )
 
 # The include file search paths:

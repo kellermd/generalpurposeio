@@ -53,6 +53,8 @@ namespace RaspberryPi2
   const std::string GPIO::GPIO2 = "GPIO2";
   const std::string GPIO::GPIO3 = "GPIO3";
   const std::string GPIO::GPIO4 = "GPIO4";
+  const std::string GPIO::GPI23 = "GPI23";
+  const std::string GPIO::GPI24 = "GPI24";
   
   int GPIO::Init()
   {
@@ -68,6 +70,9 @@ namespace RaspberryPi2
     else if (pin == GPIO::GPIO2) {_gpio_number = 2;}
     else if (pin == GPIO::GPIO3) {_gpio_number = 3;}
     else if (pin == GPIO::GPIO4) {_gpio_number = 4;}
+    else if (pin == GPIO::GPI23) {_gpio_number = 23;}
+    else if (pin == GPIO::GPI24) {_gpio_number = 24;}
+    else {throw std::logic_error("GPIO pin not implemented");}
   }
   
   void GPIO::SetOutput()

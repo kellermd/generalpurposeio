@@ -5,13 +5,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/pi/projects/GeneralPurposeIO/Common/common_dht_read.c" "/home/pi/projects/GeneralPurposeIO/build/Common/CMakeFiles/Common.dir/common_dht_read.c.o"
+  "/home/david/projects/GeneralPurposeIO/Common/common_dht_read.c" "/home/david/projects/GeneralPurposeIO/build/Common/CMakeFiles/Common.dir/common_dht_read.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/pi/projects/GeneralPurposeIO/Common/DHT.cpp" "/home/pi/projects/GeneralPurposeIO/build/Common/CMakeFiles/Common.dir/DHT.cpp.o"
-  "/home/pi/projects/GeneralPurposeIO/Common/GPIO.cpp" "/home/pi/projects/GeneralPurposeIO/build/Common/CMakeFiles/Common.dir/GPIO.cpp.o"
-  "/home/pi/projects/GeneralPurposeIO/Common/Scheduler.cpp" "/home/pi/projects/GeneralPurposeIO/build/Common/CMakeFiles/Common.dir/Scheduler.cpp.o"
+  "/home/david/projects/GeneralPurposeIO/Common/DHT.cpp" "/home/david/projects/GeneralPurposeIO/build/Common/CMakeFiles/Common.dir/DHT.cpp.o"
+  "/home/david/projects/GeneralPurposeIO/Common/GPIO.cpp" "/home/david/projects/GeneralPurposeIO/build/Common/CMakeFiles/Common.dir/GPIO.cpp.o"
+  "/home/david/projects/GeneralPurposeIO/Common/HCSR04.cpp" "/home/david/projects/GeneralPurposeIO/build/Common/CMakeFiles/Common.dir/HCSR04.cpp.o"
+  "/home/david/projects/GeneralPurposeIO/Common/Scheduler.cpp" "/home/david/projects/GeneralPurposeIO/build/Common/CMakeFiles/Common.dir/Scheduler.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

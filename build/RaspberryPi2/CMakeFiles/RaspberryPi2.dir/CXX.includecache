@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/pi/projects/GeneralPurposeIO/Common/GPIO.h
+/home/david/projects/GeneralPurposeIO/Common/GPIO.h
 string
 -
 list
@@ -22,11 +22,11 @@ string.h
 sys/time.h
 -
 
-/home/pi/projects/GeneralPurposeIO/RaspberryPi2/GPIO.cpp
+/home/david/projects/GeneralPurposeIO/RaspberryPi2/GPIO.cpp
 GPIO.h
-/home/pi/projects/GeneralPurposeIO/RaspberryPi2/GPIO.h
+/home/david/projects/GeneralPurposeIO/RaspberryPi2/GPIO.h
 ../Common/GPIO.h
-/home/pi/projects/GeneralPurposeIO/Common/GPIO.h
+/home/david/projects/GeneralPurposeIO/Common/GPIO.h
 fcntl.h
 -
 stdlib.h
@@ -46,9 +46,9 @@ unistd.h
 stdexcept
 -
 
-/home/pi/projects/GeneralPurposeIO/RaspberryPi2/GPIO.h
+/home/david/projects/GeneralPurposeIO/RaspberryPi2/GPIO.h
 ../Common/GPIO.h
-/home/pi/projects/GeneralPurposeIO/Common/GPIO.h
+/home/david/projects/GeneralPurposeIO/Common/GPIO.h
 string
 -
 stdint.h

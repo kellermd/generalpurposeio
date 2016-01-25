@@ -47,20 +47,20 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/pi/projects/GeneralPurposeIO
+CMAKE_SOURCE_DIR = /home/david/projects/GeneralPurposeIO
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/pi/projects/GeneralPurposeIO/build
+CMAKE_BINARY_DIR = /home/david/projects/GeneralPurposeIO/build
 
 #=============================================================================
 # Target rules for target CMakeFiles/generalpurposeio.dir
 
 # All Build rule for target.
-CMakeFiles/generalpurposeio.dir/all: RaspberryPi2/CMakeFiles/RaspberryPi2.dir/all
 CMakeFiles/generalpurposeio.dir/all: Common/CMakeFiles/Common.dir/all
+CMakeFiles/generalpurposeio.dir/all: RaspberryPi2/CMakeFiles/RaspberryPi2.dir/all
 	$(MAKE) -f CMakeFiles/generalpurposeio.dir/build.make CMakeFiles/generalpurposeio.dir/depend
 	$(MAKE) -f CMakeFiles/generalpurposeio.dir/build.make CMakeFiles/generalpurposeio.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/pi/projects/GeneralPurposeIO/build/CMakeFiles  6
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/projects/GeneralPurposeIO/build/CMakeFiles  7
 	@echo "Built target generalpurposeio"
 .PHONY : CMakeFiles/generalpurposeio.dir/all
 
@@ -70,9 +70,9 @@ all: CMakeFiles/generalpurposeio.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/generalpurposeio.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/projects/GeneralPurposeIO/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/david/projects/GeneralPurposeIO/build/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/generalpurposeio.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/projects/GeneralPurposeIO/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/david/projects/GeneralPurposeIO/build/CMakeFiles 0
 .PHONY : CMakeFiles/generalpurposeio.dir/rule
 
 # Convenience name for target.
@@ -110,7 +110,7 @@ Common/preinstall:
 Common/CMakeFiles/Common.dir/all:
 	$(MAKE) -f Common/CMakeFiles/Common.dir/build.make Common/CMakeFiles/Common.dir/depend
 	$(MAKE) -f Common/CMakeFiles/Common.dir/build.make Common/CMakeFiles/Common.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/pi/projects/GeneralPurposeIO/build/CMakeFiles  1 2 3 4
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/projects/GeneralPurposeIO/build/CMakeFiles  1 2 3 4 5
 	@echo "Built target Common"
 .PHONY : Common/CMakeFiles/Common.dir/all
 
@@ -120,9 +120,9 @@ all: Common/CMakeFiles/Common.dir/all
 
 # Build rule for subdir invocation for target.
 Common/CMakeFiles/Common.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/projects/GeneralPurposeIO/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/david/projects/GeneralPurposeIO/build/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 Common/CMakeFiles/Common.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/projects/GeneralPurposeIO/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/david/projects/GeneralPurposeIO/build/CMakeFiles 0
 .PHONY : Common/CMakeFiles/Common.dir/rule
 
 # Convenience name for target.
@@ -160,7 +160,7 @@ RaspberryPi2/preinstall:
 RaspberryPi2/CMakeFiles/RaspberryPi2.dir/all: Common/CMakeFiles/Common.dir/all
 	$(MAKE) -f RaspberryPi2/CMakeFiles/RaspberryPi2.dir/build.make RaspberryPi2/CMakeFiles/RaspberryPi2.dir/depend
 	$(MAKE) -f RaspberryPi2/CMakeFiles/RaspberryPi2.dir/build.make RaspberryPi2/CMakeFiles/RaspberryPi2.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/pi/projects/GeneralPurposeIO/build/CMakeFiles  5
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/david/projects/GeneralPurposeIO/build/CMakeFiles  6
 	@echo "Built target RaspberryPi2"
 .PHONY : RaspberryPi2/CMakeFiles/RaspberryPi2.dir/all
 
@@ -170,9 +170,9 @@ all: RaspberryPi2/CMakeFiles/RaspberryPi2.dir/all
 
 # Build rule for subdir invocation for target.
 RaspberryPi2/CMakeFiles/RaspberryPi2.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/projects/GeneralPurposeIO/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/david/projects/GeneralPurposeIO/build/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 RaspberryPi2/CMakeFiles/RaspberryPi2.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/projects/GeneralPurposeIO/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/david/projects/GeneralPurposeIO/build/CMakeFiles 0
 .PHONY : RaspberryPi2/CMakeFiles/RaspberryPi2.dir/rule
 
 # Convenience name for target.
